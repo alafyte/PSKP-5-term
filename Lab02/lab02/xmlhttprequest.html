@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание №4</title>
+</head>
+<body>
+<div id="content"></div>
+</body>
+<script type="text/javascript">
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '/api/name', true);
+    xhr.onreadystatechange  = () => {
+        if (xhr.status === 200 && xhr.readyState === 4) {
+            document.getElementById('content').innerHTML = xhr.responseText;
+        }
+    }
+    xhr.send();
+</script>
+</html>

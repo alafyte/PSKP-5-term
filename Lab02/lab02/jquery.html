@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание №6</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+</body>
+<script type="text/javascript">
+    $.ajax({
+        url: '/api/name',
+        type: "GET",
+        success: (response) => {
+            $('#content').html(response);
+        },
+        error: (response) => {
+            $('#content').html('Ошибка. Данные не отправлены.');
+        }
+    });
+</script>
+</html>

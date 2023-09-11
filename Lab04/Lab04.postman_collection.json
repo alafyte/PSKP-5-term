@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "e38ac992-aa07-49a9-8716-6d0f0b014ce1",
+		"name": "Lab04",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28197128"
+	},
+	"item": [
+		{
+			"name": "8 GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8 POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id\": 7, \r\n    \"name\": \"Соколова И.В.\", \r\n    \"bday\": \"19-03-2002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8 PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id\": 7, \r\n    \"name\": \"Соколова A.В.\", \r\n    \"bday\": \"19-03-2004\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8 PUT ERR",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id\": 9, \r\n    \"name\": \"Соколова A.В.\", \r\n    \"bday\": \"19-03-2004\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8 DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"db"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

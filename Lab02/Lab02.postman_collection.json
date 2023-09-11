@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "8c5cdb23-e4ce-4f73-91aa-ae84b97e77a8",
+		"name": "Lab02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28197128"
+	},
+	"item": [
+		{
+			"name": "3",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

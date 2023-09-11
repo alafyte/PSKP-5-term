@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "74fd5da9-2dcf-4015-b916-14f6d9e0f5d0",
+		"name": "Lab03",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28197128"
+	},
+	"item": [
+		{
+			"name": "2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/fact?k=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"fact"
+					],
+					"query": [
+						{
+							"key": "k",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

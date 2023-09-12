@@ -8,7 +8,7 @@
 <div id="content"></div>
 </body>
 <script type="text/javascript">
-    fetch('api/name')
+    fetch('http://localhost:5000/api/name')
         .then((response) => response.text())
         .then(text => document.getElementById('content').innerHTML = text)
 </script>

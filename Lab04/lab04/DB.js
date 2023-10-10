@@ -17,36 +17,36 @@ class DB extends EventEmitter {
 
     async insert(person) {
         return new Promise((resolve, reject) => {
-            let foundPersonIndex = this.db_data.findIndex(el => el.id == person.id);
-            if (foundPersonIndex === -1) {
+            let personIndex = this.db_data.findIndex(el => el.id == person.id);
+            if (personIndex === -1) {
                 this.db_data.push(person);
                 resolve(person);
             } else {
-                reject(createError("Found person with id " + person.id));
+                reject(createError("Найден человек с id " + person.id));
             }
         })
     };
 
     async update(person) {
         return new Promise((resolve, reject) => {
-            let foundPersonIndex = this.db_data.findIndex(el => el.id == person.id);
-            if (foundPersonIndex !== -1) {
-                this.db_data[foundPersonIndex] = person;
+            let personIndex = this.db_data.findIndex(el => el.id == person.id);
+            if (personIndex !== -1) {
+                this.db_data[personIndex] = person;
                 resolve(person);
             } else {
-                reject(createError("There's no person with id " + person.id));
+                reject(createError("Нет человека с id " + person.id));
             }
         });
     };
 
     async delete(id) {
         return new Promise((resolve, reject) => {
-            let foundPersonIndex = this.db_data.findIndex(el => el.id == id);
-            if (foundPersonIndex !== -1) {
-                this.db_data.splice(foundPersonIndex, 1);
+            let personIndex = this.db_data.findIndex(el => el.id == id);
+            if (personIndex !== -1) {
+                this.db_data.splice(personIndex, 1);
                 resolve(id);
             } else {
-                reject(createError("There's no person with id " + id));
+                reject(createError("Нет человека с id " + id));
             }
         });
     }

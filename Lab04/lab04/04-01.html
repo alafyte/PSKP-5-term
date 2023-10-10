@@ -56,9 +56,6 @@
 <br/>
 <div style="padding: 20px">
     <div class='row'>
-        <button onclick="insert()">Добавить</button>
-    </div>
-    <div class='row'>
         <label for="IDinsert">ID</label>
         <input type="number" id="IDinsert" min="0" required/>
     </div>
@@ -70,9 +67,8 @@
         <label for="BdayInsert">День рождения</label>
         <input type="date" id="BdayInsert" required/>
     </div>
-
     <div class='row'>
-        <button onclick="update()">Обновить по ID</button>
+        <button onclick="insert()">Добавить</button>
     </div>
     <div class='row'>
         <label for="IDupdate">ID</label>
@@ -87,11 +83,14 @@
         <input type="date" id="BdayUpdate" required/>
     </div>
     <div class='row'>
-        <button onclick="remove()">Удалить по ID</button>
+        <button onclick="update()">Обновить по ID</button>
     </div>
     <div class='row'>
         <label for="IDdelete">ID</label>
         <input type="number" id="IDdelete" min="0" required/>
+    </div>
+    <div class='row'>
+        <button onclick="remove()">Удалить по ID</button>
     </div>
 </div>
 
@@ -113,7 +112,7 @@
             body: JSON.stringify({
                 id: IDinsert.value,
                 name: NameInsert.value,
-                bday: BdayInsert.value,
+                bday: checkDate(BdayInsert.value),
             })
         })
             .then(response => response.json())
@@ -137,7 +136,7 @@
             body: JSON.stringify({
                 id: IDupdate.value,
                 name: NameUpdate.value,
-                bday: BdayUpdate.value,
+                bday: checkDate(BdayUpdate.value),
             })
         })
             .then(response => response.json())
@@ -190,12 +189,17 @@
             let pattern = /(\d{2})\-(\d{2})\-(\d{4})/;
             BdayUpdate.value = current_person.bday.replace(pattern,'$3-$2-$1');
         } else {
-            error.innerHTML = "There's no person with such ID";
+            error.innerHTML = "Нет человека с таким ID";
             IDupdate.value = "";
             NameUpdate.value = "";
             BdayUpdate.value = "";
         }
     };
+
+    let checkDate = (date) => {
+        let pattern = /(\d{4})\-(\d{2})\-(\d{2})/;
+        return date.replace(pattern,'$3-$2-$1');
+    }
 </script>
 </body>
 </html>

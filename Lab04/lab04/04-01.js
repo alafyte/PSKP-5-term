@@ -25,6 +25,11 @@ db.on('POST', (req, res) => {
             res.end(JSON.stringify({error: 'Поля не могут быть пустыми'}));
             return;
         }
+        if (!checkDate(r.bday)) {
+            res.writeHead(400, {'Content-Type': 'application/json; charset=utf-8'});
+            res.end(JSON.stringify({error: 'Дата рождения не может быть больше текущей'}));
+            return;
+        }
 
         db.insert(r).then(data => {
             res.writeHead(200, {'Content-Type': 'application/json; charset=utf-8'});
@@ -44,6 +49,11 @@ db.on('PUT', (req, res) => {
         if (r.id === '' || r.name === '' || r.bday === '') {
             res.writeHead(400, {'Content-Type': 'application/json; charset=utf-8'});
             res.end(JSON.stringify({error: 'Поля не могут быть пустыми'}));
+            return;
+        }
+        if (!checkDate(r.bday)) {
+            res.writeHead(400, {'Content-Type': 'application/json; charset=utf-8'});
+            res.end(JSON.stringify({error: 'Дата рождения не может быть больше текущей'}));
             return;
         }
 
@@ -78,6 +88,12 @@ db.on('DELETE', (req, res) => {
         });
     });
 });
+
+let checkDate = (date) => {
+    let pattern = /(\d{2})\-(\d{2})\-(\d{4})/;
+    let new_date = date.replace(pattern,'$3-$2-$1');
+    return new Date(new_date) <= new Date();
+}
 
 
 http.createServer((req, res) => {

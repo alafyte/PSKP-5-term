@@ -1,0 +1,15 @@
+{
+  "name": "rna_m05",
+  "version": "1.0.0",
+  "description": "My first package (lab work)",
+  "main": "m05_RNA.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alafyte",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.9.6",
+    "rna_m05": "^1.0.0"
+  }
+}

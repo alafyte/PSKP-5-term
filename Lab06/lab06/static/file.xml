@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <name>Иванов Иван</name>
+        <group>6</group>
+    </student>
+    <student>
+        <name>Петров Петр</name>
+        <group>6</group>
+    </student>
+    <student>
+        <name>Васильев Василий</name>
+        <group>6</group>
+    </student>
+</students>

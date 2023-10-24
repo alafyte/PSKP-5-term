@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "b49d9859-86a7-4b86-9e6d-63f33fd50acd",
+		"name": "Lab06",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28197128"
+	},
+	"item": [
+		{
+			"name": "8",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__comment\": \"Запрос. Лабораторная работа 8/10\",\r\n    \"x\": 1,\r\n    \"y\": 2,\r\n    \"s\": \"Сообщение\",\r\n    \"m\": [\"a\", \"b\", \"c\", \"d\"],\r\n    \"o\": {\r\n        \"surname\": \"Иванов\",\r\n        \"name\": \"Иван\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<request id=\"28\">\r\n<x value=\"1\"/>\r\n<x value=\"2\"/>\r\n<m value=\"a\"/>\r\n<m value=\"b\"/>\r\n<m value=\"c\"/>\r\n</request>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"files"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

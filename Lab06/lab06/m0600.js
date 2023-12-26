@@ -64,7 +64,7 @@ class Service {
                         x * y = ${xQuery * yQuery} <br/>
                         x / y = ${xQuery / yQuery}
                     </h1>`);
-        } else if (xRoute != 'undefined' && yRoute != 'undefined') {
+        } else if (xRoute !== undefined && yRoute !== undefined) {
             if (Number(xRoute) && Number(yRoute)) {
                 res.end(`<h1>
                         x = ${xRoute}; y = ${yRoute} <br/>

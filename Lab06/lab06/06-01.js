@@ -11,7 +11,7 @@ const httpHandler = ((req, res) => {
         switch (url.parse(req.url).pathname.split('/')[1]) {
             case '':
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-                res.end('<h1>Lab08</h1>');
+                res.end('<h1>Lab06</h1>');
                 break;
             case 'connection':
                 service.handleConnection(req, res);
